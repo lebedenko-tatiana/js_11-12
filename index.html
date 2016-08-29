@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HomeWork11_12</title>
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+  <script src="js/tmpl.js"></script> 
+  <script src="js/jquery.carousel.js"></script> 
+  <script src="js/sqript.js"></script> 
+</head>
+
+<body>
+
+  <div class="wrapper">
+
+    <h1>Карусель</h1>
+      <div class="carousel-wrapper">
+        <ul class="carousel">
+          <li class="carousel__item"><img src="img/img1.jpg" alt=""></li>
+          <li class="carousel__item"><img src="img/img2.jpg" alt=""></li>
+          <li class="carousel__item"><img src="img/img3.jpg" alt=""></li>
+          <li class="carousel__item"><img src="img/img4.jpg" alt=""></li>
+          <li class="carousel__item"><img src="img/img5.jpg" alt=""></li>
+          <li class="carousel__item"><img src="img/img6.jpg" alt=""></li>
+        </ul>
+      </div>
+
+      <a href="#" class="carousel__prev inactive">&lsaquo;</a>
+      <a href="#" class="carousel__next">&rsaquo;</a>
+    </div>
+
+  </div>
+
+
+
+
+  <script type="text/html" id="hw">
+
+    <div class="wrapper">
+
+    <div class="photo">
+      <h2><%= fio %></h2>
+      <img src="img/photo.jpg" height="250" alt="Мое фото" title="Мое фото">  
+      <p><%= imgCaption %></p>
+      <hr>
+    </div>
+
+    <div class="section">
+      <p><%= listHead %></p>
+      <ul>
+      <% for (var i = 0; i < list.length; i++) { %>   
+        <li><%= list[i] %></li>
+      <% }; %>
+      </ul>
+    </div>
+
+    <hr>
+
+    <div class="section">
+      <strong><%= phone %></strong>
+      <p><%= phoneNum %></p>
+     </div>
+
+    <div class="section">
+      <strong><%= accountFB %></strong>
+      <p><%= accountHref %></p>
+    </div>
+
+    <hr>
+
+    <div class="section">
+      <strong><%= feedBack %></strong>
+       <% for (var i = 0; i < feedList.length; i++) { %>   
+         <p><%= feedList[i] %></p>
+       <% }; %>
+    </div>
+
+    </div>
+
+  </script> 
+
+
+ 
+</body>
+
+</html>
